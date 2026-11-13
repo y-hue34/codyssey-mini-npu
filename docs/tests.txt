@@ -1,0 +1,20 @@
+test_all_required_sizes_and_position_access (test_simulator.SimulatorTests.test_all_required_sizes_and_position_access) ... ok
+test_bad_case_does_not_stop_remaining_cases (test_simulator.SimulatorTests.test_bad_case_does_not_stop_remaining_cases) ... ok
+test_benchmark_repetition_count_and_unit (test_simulator.SimulatorTests.test_benchmark_repetition_count_and_unit) ... ok
+test_epsilon_strict_boundary (test_simulator.SimulatorTests.test_epsilon_strict_boundary) ... ok
+test_filters_accept_standard_case (test_simulator.SimulatorTests.test_filters_accept_standard_case) ... ok
+test_interrupt_and_eof_exit_cleanly (test_simulator.SimulatorTests.test_interrupt_and_eof_exit_cleanly) ... ok
+test_known_cross_and_x_scores (test_simulator.SimulatorTests.test_known_cross_and_x_scores) ... ok
+test_label_aliases (test_simulator.SimulatorTests.test_label_aliases) ... ok
+test_mac_overflow_is_reported (test_simulator.SimulatorTests.test_mac_overflow_is_reported) ... ok
+test_manual_input_retries_only_bad_row (test_simulator.SimulatorTests.test_manual_input_retries_only_bad_row) ... ok
+test_matrix_rejects_invalid_values_and_dimensions (test_simulator.SimulatorTests.test_matrix_rejects_invalid_values_and_dimensions) ... ok
+test_missing_and_duplicate_filters (test_simulator.SimulatorTests.test_missing_and_duplicate_filters) ... ok
+test_missing_file_has_clear_error (test_simulator.SimulatorTests.test_missing_file_has_clear_error) ... ok
+test_provided_data_results (test_simulator.SimulatorTests.test_provided_data_results) ... ok
+test_unknown_expected_and_bad_key_are_case_failures (test_simulator.SimulatorTests.test_unknown_expected_and_bad_key_are_case_failures) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.046s
+
+OK
