@@ -1,0 +1,51 @@
+=== Mini NPU Simulator ===
+
+[data.json 분석] C:\Users\ysk00\Documents\Codex\2026-11-13\new-chat\work\npu-invalid-data.json
+[필터 로드]
+size_5: Cross, X 필터 로드 완료
+size_13: Cross, X 필터 로드 완료
+size_25: Cross, X 필터 로드 완료
+[패턴 로드/검증 및 MAC 판정]
+
+--- size_5_1 ---
+판정: 계산 불가 | expected: X | FAIL
+사유 [데이터/스키마 또는 수치 범위]: 행 개수 불일치: 기대 5, 실제 1
+
+--- size_5_2 ---
+Cross 점수: 8.9000000000000004 | X 점수: 0.10000000000000001
+판정: Cross | expected: Cross | PASS
+
+--- size_13_1 ---
+Cross 점수: 0.29999999999999999 | X 점수: 14.700000000000008
+판정: X | expected: X | PASS
+
+--- size_13_2 ---
+Cross 점수: 7.4999999999999973 | X 점수: 7.5
+판정: UNDECIDED | expected: Cross | FAIL
+사유 [수치 비교]: 동점: |Cross-X| < 1e-9, expected와 일치하지 않음
+
+--- size_25_1 ---
+Cross 점수: 4.9000000000000004 | X 점수: 4.8999999999999986
+판정: UNDECIDED | expected: X | FAIL
+사유 [수치 비교]: 동점: |Cross-X| < 1e-9, expected와 일치하지 않음
+
+--- size_25_2 ---
+판정: 계산 불가 | expected: 검증 불가 | FAIL
+사유 [데이터/스키마 또는 수치 범위]: 알 수 없는 라벨: 'triangle' (Cross/+/X/x만 허용)
+
+[성능 분석] 워밍업 1회 제외, 각 크기 MAC 30회 평균
+크기(N×N) | 평균 시간(ms) | 연산 횟수(N², MAC 1회 기준) | 데이터
+3×3 | 0.002126667 | 9 | 생성 Cross (제공 파일에 3×3 없음)
+5×5 | 0.004540000 | 25 | 생성 Cross / 제공 Cross 필터
+13×13 | 0.024680000 | 169 | 생성 Cross / 제공 Cross 필터
+25×25 | 0.100573333 | 625 | 생성 Cross / 제공 Cross 필터
+
+[결과 요약]
+총 테스트: 6개
+통과: 2개
+실패: 4개
+실패 케이스:
+- size_5_1: 행 개수 불일치: 기대 5, 실제 1
+- size_13_2: 동점: |Cross-X| < 1e-9, expected와 일치하지 않음
+- size_25_1: 동점: |Cross-X| < 1e-9, expected와 일치하지 않음
+- size_25_2: 알 수 없는 라벨: 'triangle' (Cross/+/X/x만 허용)
